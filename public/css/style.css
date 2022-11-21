@@ -37,6 +37,15 @@ navbar .logo {
   margin-left: 20px;
 }
 
+.roomdesc {
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .main {
   display: flex;
   padding: 0 12%;
@@ -305,7 +314,7 @@ navbar .logo {
   min-height: 200px;
   width: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .container-room .left-cont .video-cont .video-box .nametag {
   color: white;
@@ -350,7 +359,7 @@ navbar .logo {
   min-height: 200px;
   width: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .container-room .left-cont .video-cont-single .video-box .nametag {
   color: white;
@@ -592,17 +601,17 @@ navbar .logo {
   height: 36px;
   padding: 5px 20px;
   border: none;
-  background-color: white;
-  color: #e19e00;
+  background-color: #e19e00;
+  color: white;
   font-weight: bold;
   font-size: 0.85rem;
   border-radius: 2px;
   transition: background-color 0.5s;
 }
 .container-room .right-cont .chat-input-cont .chat-send:hover {
-  color: #f3f3f3;
+  color: #e19e00;
   cursor: pointer;
-  background-color: #e19e00;
+  background-color: white;
 }
 .container-room .right-cont .chat-input-cont .chat-send:focus {
   outline: none;

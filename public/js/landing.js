@@ -15,6 +15,13 @@ createButton.addEventListener('click', (e) => {
     location.href = `/room.html?room=${uniqueID()}`;
 });
 
+var typed = new Typed(".texting", {
+    strings: ["Simplified", "Effortless", "JOYful", "FADscinating", "sophistiKATed"],
+    typeSpeed: 30,
+    backSpeed: 30,
+    loop: true,
+});
+
 //if user input an empty roomid
 joinButton.addEventListener('click', (e) => {
     e.preventDefault();

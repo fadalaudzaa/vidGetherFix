@@ -103,7 +103,7 @@ io.on('connect', socket => {
     //if someone leaves the room, the server will receive it and notify the other users
     socket.on('disconnect', () => {
         if (!socketroom[socket.id]) return;
-        socket.to(socketroom[socket.id]).emit('message', `${socketname[socket.id]} left the chat.`, `Notification`, moment().format(
+        socket.to(socketroom[socket.id]).emit('message', `${socketname[socket.id]} has left the room.`, `Notification`, moment().format(
             "h:mm a"
         ));
         socket.to(socketroom[socket.id]).emit('remove peer', socket.id);

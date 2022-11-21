@@ -445,7 +445,8 @@ messageField.addEventListener("keyup", function (event) {
 
 //message socket interface
 socket.on('message', (msg, sendername, time) => {
-    chatRoom.scrollTop = chatRoom.scrollHeight;
+    //scroll to the max height of the chatbox
+    chatRoom.scrollTop = chatRoom.scrollHeight*2;
     chatRoom.innerHTML += `<div class="message">
     <div class="info">
         <div class="username">${sendername}</div>
