@@ -195,7 +195,7 @@ navbar .logo {
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: #000000;
+  background-color: #1c1c1c;
 }
 
 .overlay .logo {
@@ -539,6 +539,7 @@ navbar .logo {
   border-radius: 2px;
   word-break: break-all;
   word-wrap: break-word;
+  border-radius: 5px;
 }
 .container-room .right-cont .chat-cont .message .info {
   display: flex;
