@@ -542,18 +542,24 @@ navbar .logo {
   border-radius: 5px;
 }
 .container-room .right-cont .chat-cont .message .info {
+  margin-left: 5px;
   display: flex;
   font-size: 0.85rem;
 }
 .container-room .right-cont .chat-cont .message .info .username {
+  padding-top: 2px;
   padding-left: 5px;
   font-weight: bold;
   color: #e19e00;
 }
 .container-room .right-cont .chat-cont .message .info .time {
+  padding-top: 2px;
   margin-left: 12px;
 }
 .container-room .right-cont .chat-cont .message .content {
+  font-weight: bold;
+  padding-bottom: 3px;
+  margin-left: 8px;
   margin-top: 5px;
   font-size: 0.9rem;
 }

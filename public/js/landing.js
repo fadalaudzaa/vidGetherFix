@@ -4,7 +4,7 @@ const joinButton = document.querySelector('#joinroom');
 
 //generate a random code for room id 
 function uniqueID() {
-    return 'xyxyxyxyxy'.replace(/[xy]/g, function (c) {
+    return 'xyxyx'.replace(/[xy]/g, function (c) {
         var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
     });
