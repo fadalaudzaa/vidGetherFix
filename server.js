@@ -1,7 +1,7 @@
 const path = require('path'); // Path module
 const express = require('express') // Express web server framework
 const http = require('http') // node http module
-const moment = require('moment'); // to display timestamp 
+const moment = require('moment-timezone'); // to display timestamp 
 const socketio = require('socket.io'); // socket.io is used to create a websocket server
 const PORT = process.env.PORT || 3030; // Port number
 const app = express(); // Create an express app
@@ -37,7 +37,7 @@ io.on('connect', socket => {
         //print the room id and the user name in the console if the user joins the room
         if (rooms[roomid] && rooms[roomid].length > 0) {
             rooms[roomid].push(socket.id);
-            socket.to(roomid).emit('message', `${username} joined the room.`, 'Notification', moment().format(
+            socket.to(roomid).emit('message', `${username} joined the room.`, 'Notification', moment.tz('Asia/Jakarta').format(
                 "h:mm a"
             ));
             io.to(socket.id).emit('join room', rooms[roomid].filter(pid => pid != socket.id), socketname, micSocket, videoSocket);
@@ -92,7 +92,7 @@ io.on('connect', socket => {
 
     socket.on('message', (msg, username, roomid) => {
         //if someone send a message, the console will log the message
-        io.to(roomid).emit('message', msg, username, moment().format(
+        io.to(roomid).emit('message', msg, username, moment.tz('Asia/Jakarta').format(
             "h:mm a"
         ) 
     );
@@ -103,7 +103,7 @@ io.on('connect', socket => {
     //if someone leaves the room, the server will receive it and notify the other users
     socket.on('disconnect', () => {
         if (!socketroom[socket.id]) return;
-        socket.to(socketroom[socket.id]).emit('message', `${socketname[socket.id]} has left the room.`, `Notification`, moment().format(
+        socket.to(socketroom[socket.id]).emit('message', `${socketname[socket.id]} has left the room.`, `Notification`, moment.tz('Asia/Jakarta').format(
             "h:mm a"
         ));
         socket.to(socketroom[socket.id]).emit('remove peer', socket.id);
